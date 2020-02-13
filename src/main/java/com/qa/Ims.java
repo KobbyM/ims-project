@@ -25,12 +25,18 @@ public class Ims {
 	public void imsSystem() {
 		
 		
-		//while (true) {
+		while (true) {
+			System.out.println("------------");
 			LOGGER.info("Which entity would you like to use");
 			System.out.println("------------");
 			Domain.printDomains();
 		
 			Domain domain = Domain.getDomain();
+			if (domain.name() == "stop") {
+				System.exit(0);
+				break;
+			}
+			System.out.println("------------");
 			LOGGER.info("What would you like to do with " + domain.name().toLowerCase() + ":");
 			System.out.println("------------");
 			
@@ -45,7 +51,6 @@ public class Ims {
 				cOperation = customerOperation.getAction();
 				CustomerController customerController = new CustomerController(new CustomerServices(new CustomerDaoMysql("username", "password")));
 				doCustomerAction(customerController, cOperation);
-				break;
 			case ITEM:
 				itemOperation.printOperations();
 				iOperation = itemOperation.getAction();
@@ -59,14 +64,14 @@ public class Ims {
 				doOrderAction(orderController, oOperation);
 				break;
 			case STOP:
-				//System.exit(0);
+				System.exit(0);
 				break;
 			default:
 				break;
 			}
 			
-			//break;
-		//}
+			break;
+		}
 			
 	}		
 	
@@ -75,19 +80,18 @@ public class Ims {
 		switch (cOperation) {
 		case CREATE:
 			crudController.create();
-			break;
+			imsSystem();
 		case READ:
 			crudController.readAll();
-			break;
+			imsSystem();
 		case UPDATE:
 			crudController.update();
-			break;
+			imsSystem();
 		case DELETE:
 			crudController.delete();
-			break;
+			imsSystem();
 		case RETURN:
 			imsSystem();
-			break;
 		default:
 			break;
 		}
@@ -97,19 +101,18 @@ public class Ims {
 		switch (iOperation) {
 		case CREATE:
 			crudController.create();
-			break;
+			imsSystem();
 		case READ:
 			crudController.readAll();
-			break;
+			imsSystem();
 		case UPDATE:
 			crudController.update();
-			break;
+			imsSystem();
 		case DELETE:
 			crudController.delete();
-			break;
+			imsSystem();
 		case RETURN:
 			imsSystem();
-			break;
 		default:
 			break;
 		}
@@ -119,19 +122,18 @@ public class Ims {
 		switch (oOperation) {
 		case CREATE:
 			crudController.create();
-			break;
+			imsSystem();
 		case READ:
 			crudController.readAll();
-			break;
+			imsSystem();
 		case UPDATE:
 			crudController.update();
-			break;
+			imsSystem();
 		case DELETE:
 			crudController.delete();
-			break;
+			imsSystem();
 		case RETURN:
 			imsSystem();
-			break;
 		default:
 			break;
 		}

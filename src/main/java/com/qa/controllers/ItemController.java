@@ -50,6 +50,7 @@ public class ItemController implements CrudController<Item>{
 		double price = Double.parseDouble(input());
 		Item item = itemService.create(new Item(itemName, price));
 		LOGGER.info("Item created");
+		System.out.println("------------");
 		return item;
 	}
 
@@ -66,6 +67,7 @@ public class ItemController implements CrudController<Item>{
 		double price = Double.parseDouble(input());
 		Item item = itemService.update(new Item(id, itemName, price));
 		LOGGER.info("Item Updated");
+		System.out.println("------------");
 		return item;
 	}
 
@@ -77,6 +79,7 @@ public class ItemController implements CrudController<Item>{
 		LOGGER.info("Please enter the id of the item you would like to delete");
 		Long id = Long.valueOf(input());
 		itemService.delete(id);
+		LOGGER.info("Item deleted");
 	}
 	
 }

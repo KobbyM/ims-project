@@ -45,24 +45,16 @@ public static final Logger LOGGER = Logger.getLogger(OrderController.class);
 	 */
 	@Override
 	public Order create() {
-
 		LOGGER.info("Please enter the customer id");
 		int customerId = Integer.parseInt(input());
-		//while (true) {
-			//if (input().contains("stop")) {
-				//break;
-			//}
-			LOGGER.info("Please enter the item id of item you wish to buy -- enter stop to finish creating");
-			Long id = Long.valueOf(input());
-			LOGGER.info("Please enter the quantity of item");
-			int quantity = Integer.parseInt(input());
-			//double totalCost = Item.getPrice() * quantity;
-			//continue;
-		//}
-
+		LOGGER.info("Please enter the item id of item you wish to buy -- enter stop to finish creating");
+		Long id = Long.valueOf(input());
+		LOGGER.info("Please enter the quantity of item");
+		int quantity = Integer.parseInt(input());
 		double totalCost = 0;
 		Order order= orderService.create(new Order(customerId, quantity, totalCost));
 		LOGGER.info("Order created");
+		System.out.println("------------");
 		return order;
 	}
 
@@ -79,7 +71,8 @@ public static final Logger LOGGER = Logger.getLogger(OrderController.class);
 		int quantity = Integer.parseInt(input());
 		double totalCost = 0;
 		Order order= orderService.create(new Order(id, customerId, quantity, totalCost));
-		LOGGER.info("Item Updated");
+		LOGGER.info("Order Updated");
+		System.out.println("------------");
 		return order;
 	}
 
@@ -91,5 +84,6 @@ public static final Logger LOGGER = Logger.getLogger(OrderController.class);
 		LOGGER.info("Please enter the id of the order you would like to delete");
 		Long id = Long.valueOf(input());
 		orderService.delete(id);
+		LOGGER.info("Order deleted");
 	}
 }
