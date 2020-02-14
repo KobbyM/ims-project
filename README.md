@@ -7,11 +7,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 Prerequisites
 Eclipse: https://www3.ntu.edu.sg/home/ehchua/programming/howto/EclipseJava_HowTo.html
-MySQL: https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/windows-install-archive.html
-Google Cloud Platform: https://cloud.google.com/sql/docs/mysql/quickstart
-GitBash: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-Java: https://www3.ntu.edu.sg/home/ehchua/programming/howto/EclipseJava_HowTo.html
-Maven: https://howtodoinjava.com/maven/how-to-install-maven-on-windows/
+* MySQL: https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/windows-install-archive.html
+* Google Cloud Platform: https://cloud.google.com/sql/docs/mysql/quickstart
+* GitBash: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+* Java: https://www3.ntu.edu.sg/home/ehchua/programming/howto/EclipseJava_HowTo.html
+* Maven: https://howtodoinjava.com/maven/how-to-install-maven-on-windows/
 
 Installing
 Set up a google cloud instance
