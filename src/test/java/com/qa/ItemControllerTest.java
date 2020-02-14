@@ -50,7 +50,7 @@ public class ItemControllerTest {
 	@Test
 	public void createTest() {
 		String itemName = "Shield";
-		double price = 5.50;
+		double price = Double.parseDouble("5.50");
 		Mockito.doReturn(itemName).when(itemController).input();
 		Mockito.doReturn(price).when(itemController).input();
 		Item item = new Item(itemName, price);
