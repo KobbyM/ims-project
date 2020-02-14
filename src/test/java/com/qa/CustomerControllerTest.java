@@ -29,7 +29,7 @@ public class CustomerControllerTest {
 	private CustomerServices customerServices;
 	
 	/**
-	 * Spy is used because i want to mock some methods inside the item I'm testing
+	 * Spy is used because i want to mock some methods inside the customers I'm testing
 	 * InjectMocks uses dependency injection to insert the mock into the customer controller
 	 */
 	@Spy

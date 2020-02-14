@@ -23,7 +23,7 @@ public class ItemController implements CrudController<Item>{
 		this.itemService = itemService;
 	}
 	
-	String input() {
+	public String input() {
 		return Utils.input();
 	}
 	
